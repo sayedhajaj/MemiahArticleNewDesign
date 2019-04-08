@@ -25,3 +25,5 @@ From 0 - 12
   Uses SCSS, compiles using: `sass --watch main.scss stylesheet.css`
   
   No javascript, will have to be used for toggle bar
+
+  View here: https://sayedhajaj.github.io/MemiahArticleNewDesign/
