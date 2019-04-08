@@ -1,0 +1,166 @@
+.container {
+	width: 60%;
+	margin: auto;
+	margin-top: 2%;
+	// margin-top: 80px;
+	// display: flex;
+}
+
+.content {
+	margin-top: 80px;
+}
+
+.row {
+	width: 100%;
+	clear: both;
+	// display: block;
+}
+
+body {
+	margin: 0px;
+}
+img {
+	max-width: 100%;
+
+}
+
+$ocean : #008192;
+$dark_slate_blue: #132e49;
+
+.tag {
+	color: $ocean;
+	font-weight: bold;
+}
+
+
+
+strong, h1, h2 {
+	color: $dark_slate_blue;
+}
+
+h1 {
+	line-height: 1.24;
+	color: $dark_slate_blue;
+}
+
+h2 {
+	line-height: 1.27;
+	color: $dark_slate_blue;
+}
+
+article::first-letter {
+	font-size: 57px;
+	color: $ocean;
+}
+
+$min_laptop : 1000px;
+$min_tablet : 760px;
+
+
+@for $i from 0 through 12 {
+		.#{"col-default-"}#{$i} {
+			width: #{100 * ($i/12)}#{"%"};
+			display: inline-block;
+			// float: left;
+		}
+
+		.#{"default-offset-"}#{$i} {
+			margin-left: #{(100 * ($i/12))}#{"%"};
+		}
+	}
+
+@media (min-width: $min_laptop) {
+	article {
+		font-size: 21px;
+
+		blockquote {
+			font-size: 34px;
+		}
+
+
+	}
+
+	@for $i from 0 through 12 {
+		.#{"col-md-"}#{$i} {
+			width: #{100 * ($i/12)}#{"%"};
+			display: inline-block;
+			// float: left;
+		}
+
+		.#{"md-offset-"}#{$i} {
+			margin-left: #{(100 * ($i/12))}#{"%"};
+		}
+	}
+
+
+	.imageContainer {
+		width: 75%;
+		margin: auto;
+	}
+
+	.hideOnLaptop {
+		display: none;
+	}
+}
+
+@media (min-width: $min_tablet) and (max-width: $min_laptop) {
+	* {
+		// background: blue;
+	}
+
+	.hideOnTablet {
+		display: none;
+	}
+
+	@for $i from 0 through 12 {
+		.#{"col-tablet-"}#{$i} {
+			width: #{100 * ($i/12)}#{"%"};
+			display: inline-block;
+			// float: left;
+		}
+
+		.#{"tablet-offset-"}#{$i} {
+			margin-left: #{(100 * ($i/12))}#{"%"};
+		}
+	}
+
+}
+
+@media (max-width: $min_tablet) {
+	* {
+		// background: green;
+	}
+
+	blockquote {
+		font-size: 22px;
+		
+		line-height: 1.45;
+		
+	}
+
+	.container {
+		width: 90%;
+	}
+
+	.hideOnPhone {
+		display: none;
+	}
+
+	@for $i from 0 through 12 {
+		.#{"col-sm-"}#{$i} {
+			width: #{100 * ($i/12)}#{"%"};
+			display: inline-block;
+			// float: left;
+		}
+
+		.#{"sm-offset-"}#{$i} {
+			margin-left: #{(100 * ($i/12))}#{"%"};
+		}
+	}
+
+	article {
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 1.56;
+	}
+}

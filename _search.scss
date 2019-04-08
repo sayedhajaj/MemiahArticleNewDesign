@@ -1,0 +1,39 @@
+.search input {
+	border: thin solid #dbdfe4;
+	border-radius: 28px;
+	width: 648px;
+	max-width: 100%;
+	font-size: 1.2em;	
+	background: #f6f6f6;
+	height: 56px;
+	
+}
+
+.search button {
+	position: absolute;
+	right: 0;
+	top: 6px;
+	height: 48px;
+	border-radius: 24px;
+	width: 118px;
+	background-color: #007585;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+input::placeholder {
+		color: #767676;
+}
+
+.search {
+	border-bottom: thin solid #dbdfe4;
+	margin-bottom: 20px;
+	div {
+		text-align: center;
+	}
+}
+
+.search-wrapper {
+	position: relative;
+}
